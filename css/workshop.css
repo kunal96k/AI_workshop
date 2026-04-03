@@ -5,27 +5,27 @@
 
 /* ===== NAVBAR ON DARK HERO — WHITE TEXT ON DESKTOP ===== */
 @media (min-width: 769px) {
-    .navbar:not(.scrolled) .nav-links > a,
-    .navbar:not(.scrolled) .nav-links .dropdown-toggle {
+    .dark-hero-page .navbar:not(.scrolled) .nav-links > a,
+    .dark-hero-page .navbar:not(.scrolled) .nav-links .dropdown-toggle {
         color: rgba(255, 255, 255, 0.85);
     }
 
-    .navbar:not(.scrolled) .nav-links > a:hover,
-    .navbar:not(.scrolled) .nav-links > a.active,
-    .navbar:not(.scrolled) .nav-links .dropdown-toggle:hover {
+    .dark-hero-page .navbar:not(.scrolled) .nav-links > a:hover,
+    .dark-hero-page .navbar:not(.scrolled) .nav-links > a.active,
+    .dark-hero-page .navbar:not(.scrolled) .nav-links .dropdown-toggle:hover {
         color: #ffffff;
     }
 
-    .navbar:not(.scrolled) .nav-links a.active {
+    .dark-hero-page .navbar:not(.scrolled) .nav-links a.active {
         color: var(--gold-light);
     }
 
-    .navbar:not(.scrolled) .nav-links .dropdown-toggle::after {
+    .dark-hero-page .navbar:not(.scrolled) .nav-links .dropdown-toggle::after {
         border-top-color: rgba(255, 255, 255, 0.7);
     }
 }
 
-.navbar:not(.scrolled) .hamburger span {
+.dark-hero-page .navbar:not(.scrolled) .hamburger span {
     background: #ffffff;
 }
 
@@ -627,6 +627,78 @@ body.loaded .ws-hero-visual {
     font-weight: 700;
     color: rgba(200, 164, 94, 0.4);
     margin-bottom: 16px;
+}
+
+/* New Batch Card Styling */
+.ws-batch-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.ws-batch-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background: var(--gradient-gold);
+    color: var(--text-primary);
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: var(--radius-full);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.ws-batch-title {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ws-batch-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ws-batch-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.ws-batch-benefits ion-icon {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.ws-batch-footer {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.ws-batch-footer p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+}
+
+/* Hiring Partners Scroll Animation */
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* ===== SCHEDULE SECTION ===== */

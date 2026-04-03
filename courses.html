@@ -4,21 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Courses -- Capernaum Solutions Pvt. Ltd</title>
+    <title>Training Courses | Capernaum Solutions | IT Placement Institute</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta name="description"
-        content="Expert training in Full Stack Development, AI & ML, Data Science, and more. Upgrade your skills with Capernaum Solutions training institute.">
+        content="Expert training in Full Stack Development, AI & ML, Data Science, and more. Get placement support and industry-leading training. Association with TechnoKraft.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/workshop.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .top-bar {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 13px;
+            z-index: 1001;
+            position: relative;
+        }
+
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .top-bar-left,
+        .top-bar-right {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        .top-bar-item ion-icon {
+            color: #c8a45e;
+            font-size: 16px;
+        }
+
+        .top-bar-assoc {
+            font-weight: 700;
+            color: #e8d5a3;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 991px) {
+            .top-bar-left {
+                display: none;
+            }
+
+            .top-bar-inner {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="loader-content">
@@ -29,246 +86,353 @@
         </div>
     </div>
 
-
-    <!-- Scroll Progress Bar -->
-
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
-
-    <!-- Background Elements -->
-    <div class="scene-3d">
-        <div class="float-shape"></div>
-        <div class="float-shape"></div>
-        <div class="float-shape"></div>
-        <div class="float-shape"></div>
-        <div class="float-shape"></div>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <a href="tel:8956745093">8956745093</a>
+                </div>
+                <div class="top-bar-item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <a href="mailto:info@capernaumsolutions.com">info@capernaumsolutions.com</a>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-assoc">
+                    Association With -- TechnoKraft Training & Solution Pvt. Ltd.
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="grid-pattern"></div>
-    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Navbar -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" style="top: 38px;">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <img src="images/capernaum_12.png" alt="Capernaum Solutions Pvt. Ltd" class="logo-img">
             </a>
             <div class="nav-links" id="navLinks">
-                <div class="sidebar-logo">
-                    <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
-                </div>
                 <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
+                <a href="about.html">About</a>
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle">Services</a>
+                    <a href="courses.html" class="active dropdown-toggle">Courses</a>
                     <div class="dropdown-menu">
-                        <a href="customer-support.html">Customer Support</a>
-                        <a href="quality-assurance.html">Quality Assurance</a>
-                        <a href="lead-generation.html">Lead Generation</a>
-                        <a href="it-solutions.html">IT Solutions</a>
-                        <a href="digital-marketing.html">Digital Marketing</a>
-                        <a href="market-research.html">Market Research</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="courses.html" class="dropdown-toggle">Courses</a>
-                    <div class="dropdown-menu">
+                        <!-- Development Tracks -->
+                        <div class="dropdown-header"
+                            style="color: var(--gold); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 12px 20px 8px; border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: 4px;">
+                            DEVELOPMENT TRACKS</div>
                         <a href="courses.html#fullstack">Full Stack Development</a>
-                        <a href="courses.html#data-science">Data Science</a>
-                        <a href="courses.html#linux">Linux Administration</a>
-                        <a href="courses.html#data-analytics">Data Analytics</a>
-                        <a href="courses.html#app-dev">App & Web Dev</a>
+                        <a href="courses.html#mern">MERN / MEAN Stack</a>
+                        <a href="courses.html#app-dev">App Development</a>
+                        <a href="courses.html#data-science">Data Science & AI</a>
+
+                        <!-- Administration Tracks -->
+                        <div class="dropdown-header"
+                            style="color: var(--gold); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 12px 20px 8px; border-bottom: 1px solid rgba(0,0,0,0.05); border-top: 1px solid rgba(0,0,0,0.05); margin-bottom: 4px; margin-top: 4px;">
+                            ADMINISTRATION TRACKS</div>
+                        <a href="courses.html#linux">LINUX Administrators</a>
                         <a href="courses.html#networking">Networking (CCNA)</a>
                     </div>
                 </div>
                 <a href="careers.html">Careers</a>
-                <a href="contact.html" class="nav-cta">Contact Us</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-cta">Apply Now</a>
             </div>
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </nav>
 
     <!-- Page Hero -->
-    <section class="page-hero" style="padding-top: 160px; padding-bottom: 80px; text-align: center;">
+    <section class="page-hero" style="padding-top: 180px;">
         <div class="container">
-            <div class="section-label">Training Institute</div>
-            <h1 data-split-text>Professional <span class="shimmer-text">Training Courses</span></h1>
-            <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
-                Empower your career with industry-leading courses. From Full Stack Development to AI & Data Science, we
-                provide comprehensive training to help you succeed.
-            </p>
+            <div class="section-label">Technical Courses</div>
+            <h1 data-split-text>Professional <span class="shimmer-text">Training Mastery</span></h1>
+            <p>Upgrade your skills with our industry-leading technical courses. We offer deep-dives into the world's
+                most in-demand technologies.</p>
         </div>
     </section>
 
-    <!-- Full Stack Section -->
-    <section class="services-section" id="fullstack" style="position:relative;overflow:hidden;">
-        <div class="morph-blob" style="background: var(--gradient-blue); top: -100px; left: -150px;"></div>
+    <!-- Full Stack Development Section -->
+    <section class="services-section" id="fullstack" style="padding: 100px 0;">
         <div class="container">
             <div class="section-header reveal-flip">
+                <div class="section-label">Master Path</div>
                 <h2 class="section-title">Full Stack <span class="gradient-text">Development</span></h2>
-                <p class="section-subtitle">Master end-to-end development with our specialized full stack courses.</p>
+                <p class="section-subtitle">Become a complete developer with end-to-end expertise in modern web
+                    technologies.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon gold"><ion-icon name="logo-java"></ion-icon></div>
-                    <h3>Full Stack Java</h3>
-                    <p>Master Java web based application with Spring Boot, Hibernate, and front-end technologies like
-                        React or Angular.</p>
+                <div class="service-card reveal">
+                    <div class="service-icon gold"><ion-icon name="cafe-outline"></ion-icon></div>
+                    <h3>Java Full Stack</h3>
+                    <p>Core Java, Advanced Java (Servlet/JSP), Spring Boot, Hibernate, and Angular/React integration.
+                    </p>
+                    <ul
+                        style="list-style: none; padding: 0; margin-top: 15px; font-size: 13px; color: var(--text-muted);">
+                        <li><ion-icon name="checkmark" style="color: var(--gold);"></ion-icon> Microservices
+                            Architecture</li>
+                        <li><ion-icon name="checkmark" style="color: var(--gold);"></ion-icon> Maven & Jenkins
+                            Deployment</li>
+                    </ul>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
+                <div class="service-card reveal reveal-delay-1">
                     <div class="service-icon blue"><ion-icon name="logo-python"></ion-icon></div>
-                    <h3>Full Stack Python</h3>
-                    <p>Build robust applications using Python, Django/Flask, and modern front-end frameworks.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon teal"><ion-icon name="code-slash-outline"></ion-icon></div>
-                    <h3>PHP Development</h3>
-                    <p>Learn server-side scripting with PHP, MySQL, and Laravel for dynamic web applications.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon green"><ion-icon name="layers-outline"></ion-icon></div>
-                    <h3>MEAN Stack</h3>
-                    <p>Become an expert in MongoDB, Express.js, Angular, and Node.js for JavaScript-based full stack
-                        development.</p>
+                    <h3>Python Full Stack</h3>
+                    <p>Python Fundamentals, Django Framework, Flask, and Database management with PostgreSQL.</p>
+                    <ul
+                        style="list-style: none; padding: 0; margin-top: 15px; font-size: 13px; color: var(--text-muted);">
+                        <li><ion-icon name="checkmark" style="color: var(--gold);"></ion-icon> REST API Development</li>
+                        <li><ion-icon name="checkmark" style="color: var(--gold);"></ion-icon> Serverless Integration
+                        </li>
+                    </ul>
                 </div>
                 <div class="service-card reveal reveal-delay-2">
                     <div class="service-icon purple"><ion-icon name="server-outline"></ion-icon></div>
-                    <h3>MERN Stack</h3>
-                    <p>Master MongoDB, Express.js, React, and Node.js to build powerful single-page applications.</p>
+                    <h3>Backend Mastery</h3>
+                    <p>Advanced SQL, NoSQL (MongoDB), Cloud hosting, and CI/CD pipelines for production.</p>
+                    <ul
+                        style="list-style: none; padding: 0; margin-top: 15px; font-size: 13px; color: var(--text-muted);">
+                        <li><ion-icon name="checkmark" style="color: var(--gold);"></ion-icon> Docker & Kubernetes</li>
+                        <li><ion-icon name="checkmark" style="color: var(--gold);"></ion-icon> Unit Testing
+                            (JUnit/Pytest)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Data & AI Section -->
-    <section class="services-section" id="data-science" style="background: var(--bg-tertiary);">
+    <!-- Data Science & AI Section -->
+    <section class="services-section" id="data-science" style="padding: 100px 0; background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Future Skills</div>
+                <h2 class="section-title">Data Science <span class="gradient-text">& AI</span></h2>
+                <p class="section-subtitle">Harness the power of data and implement cutting-edge Artificial Intelligence
+                    models.</p>
+            </div>
+            <div class="ws-takeaway-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="service-card reveal">
+                    <div class="service-icon purple"><ion-icon name="analytics-outline"></ion-icon></div>
+                    <h3>Machine Learning</h3>
+                    <p>Supervised and Unsupervised learning, Linear Regression, Decision Trees, and Random Forest.</p>
+                </div>
+                <div class="service-card reveal-delay-1">
+                    <div class="service-icon blue"><ion-icon name="sparkles-outline"></ion-icon></div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Deep Learning, Neural Networks, Natural Language Processing (NLP), and Computer Vision.</p>
+                </div>
+                <div class="service-card reveal-delay-2">
+                    <div class="service-icon gold"><ion-icon name="stats-chart-outline"></ion-icon></div>
+                    <h3>Big Data Analytics</h3>
+                    <p>Power BI, Tableau, Advanced Excel, and data storytelling for business insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERN / MEAN Stack Section -->
+    <section class="services-section" id="mern" style="padding: 100px 0;">
         <div class="container">
             <div class="section-header reveal-flip">
-                <h2 class="section-title">Data Science & <span class="gradient-text">AI</span></h2>
-                <p class="section-subtitle">Unlock the power of data with our advanced analytics and intelligence
-                    courses.</p>
+                <div class="section-label">Web Innovation</div>
+                <h2 class="section-title">MERN / MEAN <span class="gradient-text">Stack</span></h2>
+                <p class="section-subtitle">JavaScript everywhere. Build highly scalable and real-time modern web
+                    applications.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1" id="data-science-course">
-                    <div class="service-icon gold"><ion-icon name="hardware-chip-outline"></ion-icon></div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Dive into artificial intelligence, neural networks, and machine learning algorithms using Python.
+                <div class="service-card reveal">
+                    <div class="service-icon blue"><ion-icon name="logo-nodejs"></ion-icon></div>
+                    <h3>MERN Path</h3>
+                    <p>MongoDB, Express.js, React.js, and Node.js. The industry standard for startup development.</p>
+                </div>
+                <div class="service-card reveal-delay-1">
+                    <div class="service-icon gold"><ion-icon name="logo-angular"></ion-icon></div>
+                    <h3>MEAN Path</h3>
+                    <p>MongoDB, Express.js, Angular, and Node.js. Preferred by large enterprises for robust apps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Development, CCNA, and Linux Admin in separate grid -->
+    <section class="services-section" style="padding: 100px 0; background: var(--bg-primary);">
+        <div class="container">
+            <div class="ws-takeaway-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <!-- App Dev -->
+                <div class="service-card reveal" id="app-dev">
+                    <div class="service-icon blue"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+                    <h3>App Development</h3>
+                    <p>Cross-platform mobile apps using Flutter and React Native. iOS and Android expert training.</p>
+                </div>
+                <!-- Networking (CCNA) -->
+                <div class="service-card reveal-delay-1" id="networking">
+                    <div class="service-icon gold"><ion-icon name="git-network-outline"></ion-icon></div>
+                    <h3>Networking (CCNA)</h3>
+                    <p>Cisco Certified Network Associate training. Router & Switch configuration, Security, and IP
+                        protocols.</p>
+                </div>
+                <!-- Linux Admin -->
+                <div class="service-card reveal-delay-2" id="linux">
+                    <div class="service-icon purple"><ion-icon name="terminal-outline"></ion-icon></div>
+                    <h3>LINUX Administrators</h3>
+                    <p>System Administration, Shell Scripting, Server hardening, and Enterprise RedHat/Ubuntu
+                        environments.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Project & Outcome Section -->
+        <section class="ws-takeaways" style="padding: 100px 0; background: var(--bg-tertiary);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-label">Real Experience</div>
+                    <h2 class="section-title">Industrial Projects <span class="gradient-text">& Internship</span></h2>
+                    <p class="section-subtitle">Every course includes 2+ real-world industrial projects and a guaranteed
+                        internship certificate.</p>
+                </div>
+                <div class="ws-takeaway-grid">
+                    <div class="ws-takeaway-card reveal">
+                        <div class="ws-ta-icon"><ion-icon name="briefcase-outline"></ion-icon></div>
+                        <h3>Case Studies</h3>
+                        <p>Live analysis of existing corporate solutions and architecture designs.</p>
+                    </div>
+                    <div class="ws-takeaway-card reveal-delay-1">
+                        <div class="ws-ta-icon"><ion-icon name="rocket-outline"></ion-icon></div>
+                        <h3>Launch Ready</h3>
+                        <p>Building high-performance applications from scratch using the latest tech stacks.</p>
+                    </div>
+                    <div class="ws-takeaway-card reveal-delay-2">
+                        <div class="ws-ta-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                        <h3>Certification</h3>
+                        <p>Authorized Professional Training Certificate from Capernaum Solutions and TechnoKraft.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specific Course FAQ -->
+        <section id="course-faq" class="ws-faq" style="padding: 100px 0; background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-label">Course Queries</div>
+                    <h2 class="section-title">Everything About <span class="gradient-text">Our Training</span></h2>
+                    <p class="section-subtitle">Got questions about the curriculum or learning path? We have answers.
                     </p>
                 </div>
-                <div class="service-card reveal reveal-delay-2" id="data-science-detail">
-                    <div class="service-icon blue"><ion-icon name="analytics-outline"></ion-icon></div>
-                    <h3>Data Science</h3>
-                    <p>Learn to analyze complex data sets, build predictive models, and derive actionable insights.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3" id="data-analytics">
-                    <div class="service-icon teal"><ion-icon name="stats-chart-outline"></ion-icon></div>
-                    <h3>Data Analytics</h3>
-                    <p>Master data visualization, SQL, and statistical analysis tools to interpret business data
-                        effectively.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon green"><ion-icon name="pie-chart-outline"></ion-icon></div>
-                    <h3>Business Analytics</h3>
-                    <p>Bridge the gap between business and technology with data-driven decision making strategies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- App & Web Dev + Networking Section -->
-    <section class="services-section" id="app-dev" style="position:relative;overflow:hidden;">
-        <div class="morph-blob" style="background: var(--gradient-warm); bottom: -100px; right: -150px;"></div>
-        <div class="container">
-            <div class="section-header reveal-flip">
-                <h2 class="section-title">Development & <span class="gradient-text">Networking</span></h2>
-                <p class="section-subtitle">Specialized courses for mobile, web, and network infrastructure.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon gold"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-                    <h3>App Development</h3>
-                    <p>Create stunning mobile applications for Android and iOS using Flutter, React Native, or native
-                        languages.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon blue"><ion-icon name="globe-outline"></ion-icon></div>
-                    <h3>Website Development</h3>
-                    <p>Learn responsive web design, HTML5, CSS3, JavaScript, and modern UI/UX principles.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3" id="linux">
-                    <div class="service-icon purple"><ion-icon name="terminal-outline"></ion-icon></div>
-                    <h3>Linux Administration</h3>
-                    <p>Master Linux kernel, shell scripting, server management, and security protocols for professional environments.</p>
-                </div>
-                <div class="service-card reveal reveal-delay-3" id="networking">
-                    <div class="service-icon teal"><ion-icon name="git-network-outline"></ion-icon></div>
-                    <h3>CCNA (Networking)</h3>
-                    <p>Prepare for Cisco Certified Network Associate certification with comprehensive networking
-                        training.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-banner reveal-scale">
-                <h2>Ready to Start Your <span class="gradient-text">Learning Journey?</span></h2>
-                <p>Enquire now to get detailed syllabus and batch timings for your preferred course.</p>
-                <a href="contact.html" class="btn-primary">Enquire Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
-                    </div>
-                    <p>We are committed to transparency, integrity, and clear communication, forming long-term
-                        partnerships through trust, consistency, and excellence in service.</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/people/Capernaum-Solutions/61577803556763/"
-                            target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://www.instagram.com/capernaumsolutions_official" target="_blank"><ion-icon
-                                name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <div class="ws-faq-container" style="max-width: 850px; margin: 0 auto;">
+                    <div class="ws-faq-list">
+                        <div class="ws-faq-item">
+                            <button class="ws-faq-question">
+                                <span>Is the training completely practical?</span>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+                            <div class="ws-faq-answer">
+                                <p>Yes, our training is 80% practical. While we cover all necessary theoretical
+                                    concepts, the focus is on writing code and building applications in every session.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ws-faq-item">
+                            <button class="ws-faq-question">
+                                <span>Do you provide the latest syllabus for Cloud and AI?</span>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+                            <div class="ws-faq-answer">
+                                <p>Absolutely. Our curriculum is updated every quarter to include the latest trends like
+                                    Generative AI, Cloud-Native development, and modern DevOps tools.</p>
+                            </div>
+                        </div>
+                        <div class="ws-faq-item">
+                            <button class="ws-faq-question">
+                                <span>What happens if I miss a class?</span>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </button>
+                            <div class="ws-faq-answer">
+                                <p>We provide backup sessions and video recordings of the classes so you never fall
+                                    behind. You can also join a different batch for those specific modules.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact Us</a>
+            </div>
+        </section>
+
+        <!-- Ready to Start Section -->
+        <section class="ws-cta-section"
+            style="padding: 80px 0; background: linear-gradient(135deg, #1a1a2e, #2d2d5e); color: #fff; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 15px;">Ready to Start Your IT Career?</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Join 500+ successful students who transformed their lives with our job-oriented training.</p>
+                <a href="contact.html" class="nav-cta" style="padding: 15px 40px; font-size: 16px;">Enroll in New
+                    Batch</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
+                        </div>
+                        <p style="margin-bottom: 20px;">Leading IT training and placement institute in Pune. Association
+                            With -- TechnoKraft Training & Solution Pvt. Ltd.</p>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="color: var(--gold); font-size: 20px;"><ion-icon
+                                    name="logo-facebook"></ion-icon></a>
+                            <a href="#" style="color: var(--gold); font-size: 20px;"><ion-icon
+                                    name="logo-instagram"></ion-icon></a>
+                            <a href="#" style="color: var(--gold); font-size: 20px;"><ion-icon
+                                    name="logo-linkedin"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="index.html#faq">FAQ</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Training Tracks</h4>
+                        <a href="courses.html#fullstack">Full Stack Java / Python</a>
+                        <a href="courses.html#mern">MERN / MEAN Stack</a>
+                        <a href="courses.html#app-dev">App Development</a>
+                        <a href="courses.html#data-science">Data Science & AI</a>
+                        <a href="courses.html#networking">Networking (CCNA)</a>
+                        <a href="courses.html#linux">Linux Administration</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Training</h4>
-                    <a href="courses.html#fullstack">Full Stack Dev</a>
-                    <a href="courses.html#data-ai">AI & Data Science</a>
-                    <a href="courses.html#app-dev">App Development</a>
-                    <a href="courses.html#networking">CCNA</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="careers.html">Careers</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Capernaum Solutions Pvt. Ltd. | In Association With -- <a href="https://tts.net.in/"
+                            target="_blank">TechnoKraft Training & Solution Pvt. Ltd.</a></p>
+                    <p>Designed by <a href="https://www.technokraftservices.com/" target="_blank"
+                            rel="noopener">Technokraft
+                            Services LLP</a></p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Capernaum Solutions Pvt. Ltd. All rights reserved. | Place of Support</p>
-                <p>Designed by <a href="https://www.technokraftservices.com/" target="_blank" rel="noopener">Technokraft
-                        Services LLP</a></p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    
-
-    <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/workshop.js"></script>
+        <script>
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                    navbar.style.top = '0';
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.style.top = '38px';
+                }
+            });
+        </script>
 </body>
 
 </html>

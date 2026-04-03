@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/workshop.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -41,29 +43,25 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle">Services</a>
-                    <div class="dropdown-menu">
-                        <a href="customer-support.html">Customer Support</a>
-                        <a href="quality-assurance.html">Quality Assurance</a>
-                        <a href="lead-generation.html">Lead Generation</a>
-                        <a href="it-solutions.html">IT Solutions</a>
-                        <a href="digital-marketing.html">Digital Marketing</a>
-                        <a href="market-research.html">Market Research</a>
-                    </div>
-                </div>
-                <div class="dropdown">
                     <a href="courses.html" class="dropdown-toggle">Courses</a>
                     <div class="dropdown-menu">
+                        <!-- Development Tracks -->
+                        <div class="dropdown-header" style="color: var(--gold); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 12px 20px 8px; border-bottom: 1px solid rgba(0,0,0,0.05); margin-bottom: 4px;">DEVELOPMENT TRACKS</div>
                         <a href="courses.html#fullstack">Full Stack Development</a>
-                        <a href="courses.html#data-science">Data Science</a>
-                        <a href="courses.html#linux">Linux Administration</a>
-                        <a href="courses.html#data-analytics">Data Analytics</a>
-                        <a href="courses.html#app-dev">App & Web Dev</a>
+                        <a href="courses.html#mern">MERN / MEAN Stack</a>
+                        <a href="courses.html#app-dev">App Development</a>
+                        <a href="courses.html#data-science">Data Science & AI</a>
+                        
+                        <!-- Administration Tracks -->
+                        <div class="dropdown-header" style="color: var(--gold); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 12px 20px 8px; border-bottom: 1px solid rgba(0,0,0,0.05); border-top: 1px solid rgba(0,0,0,0.05); margin-bottom: 4px; margin-top: 4px;">ADMINISTRATION TRACKS</div>
+                        <a href="courses.html#linux">LINUX Administrators</a>
                         <a href="courses.html#networking">Networking (CCNA)</a>
                     </div>
                 </div>
                 <a href="careers.html" class="active">Careers</a>
-                <a href="contact.html" class="nav-cta">Contact Us</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-cta">Apply Now</a>
             </div>
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
@@ -201,46 +199,40 @@
                     <div class="logo">
                         <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
                     </div>
-                    <p>We are committed to transparency, integrity, and clear communication, forming long-term
-                        partnerships through trust, consistency, and excellence in service.</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/people/Capernaum-Solutions/61577803556763/"
-                            target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="https://www.instagram.com/capernaumsolutions_official" target="_blank"><ion-icon
-                                name="logo-instagram"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <p style="margin-bottom: 20px;">Leading IT training and placement institute in Pune. Association With -- TechnoKraft Training & Solution Pvt. Ltd.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--gold); font-size: 20px;"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#" style="color: var(--gold); font-size: 20px;"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#" style="color: var(--gold); font-size: 20px;"><ion-icon name="logo-linkedin"></ion-icon></a>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
+                    <a href="index.html#faq">FAQ</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="customer-support.html">Customer Support</a>
-                    <a href="quality-assurance.html">Quality Assurance</a>
-                    <a href="lead-generation.html">Lead Generation</a>
-                    <a href="it-solutions.html">IT Solutions</a>
-                    <a href="digital-marketing.html">Digital Marketing</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="careers.html">Careers</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
+                    <h4>Training Tracks</h4>
+                    <a href="courses.html#fullstack">Full Stack Java / Python</a>
+                    <a href="courses.html#mern">MERN / MEAN Stack</a>
+                    <a href="courses.html#app-dev">App Development</a>
+                    <a href="courses.html#data-science">Data Science & AI</a>
+                    <a href="courses.html#networking">Networking (CCNA)</a>
+                    <a href="courses.html#linux">Linux Administration</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Capernaum Solutions Pvt. Ltd. All rights reserved. | Place of Support</p>
+                <p>&copy; 2026 Capernaum Solutions Pvt. Ltd. | In Association With -- <a href="https://tts.net.in/"
+                        target="_blank">TechnoKraft Training & Solution Pvt. Ltd.</a></p>
                 <p>Designed by <a href="https://www.technokraftservices.com/" target="_blank" rel="noopener">Technokraft
                         Services LLP</a></p>
             </div>
         </div>
     </footer>
 
-    
+
 
     <script src="js/main.js"></script>
 </body>
