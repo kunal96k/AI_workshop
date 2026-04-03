@@ -1,0 +1,315 @@
+/* ============================================================
+   CAPERNAUM SOLUTIONS 
+   ============================================================ */
+
+/* ===== CUSTOM CURSOR REMOVED ===== */
+
+/* ===== NOISE TEXTURE OVERLAY ===== */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9000;
+    opacity: 0.03;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ===== ENHANCED 3D FLOATING BACKGROUND ===== */
+.scene-enhancer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: orbFloat 20s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, var(--gold-light) 0%, transparent 70%);
+    top: -20%;
+    left: -20%;
+    animation-duration: 25s;
+}
+
+.orb-2 {
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+    bottom: -10%;
+    right: -10%;
+    animation-duration: 30s;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 30vw;
+    height: 30vw;
+    background: radial-gradient(circle, rgba(200, 164, 94, 0.15) 0%, transparent 70%);
+    top: 40%;
+    left: 40%;
+    animation-duration: 22s;
+    animation-delay: -10s;
+}
+
+@keyframes orbFloat {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(100px, 50px) scale(1.1);
+    }
+}
+
+/* ===== HERO 3D TEXT TRANSFORMS ===== */
+.hero-3d-text {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.hero h1 span.gradient-text {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-out;
+}
+
+/* ===== SCROLL DOWN INDICATOR ===== */
+.scroll-down-mouse {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.7;
+    animation: fadeMouse 2s infinite;
+}
+
+.mouse-icon {
+    width: 26px;
+    height: 42px;
+    border: 2px solid var(--text-secondary);
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse-wheel {
+    width: 4px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: wheelDrop 1.5s infinite;
+}
+
+@keyframes wheelDrop {
+    0% {
+        top: 6px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 24px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeMouse {
+
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translateX(-50%) translateY(5px);
+    }
+}
+
+/* ===== HERO CARD 3D FLOATING ELEMENTS ===== */
+.hero-card {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.float-badge {
+    position: absolute;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-primary);
+    z-index: 10;
+    transform: translateZ(40px);
+    animation: floatBadge 6s ease-in-out infinite;
+}
+
+.float-badge.badge-1 {
+    top: -20px;
+    right: -20px;
+    animation-delay: 0s;
+}
+
+.float-badge.badge-2 {
+    bottom: -20px;
+    left: -20px;
+    animation-delay: 3s;
+}
+
+.float-badge i {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+@keyframes floatBadge {
+
+    0%,
+    100% {
+        transform: translateZ(40px) translateY(0);
+    }
+
+    50% {
+        transform: translateZ(40px) translateY(-10px);
+    }
+}
+
+/* ===== PAGE TRANSITION PRELOADER ===== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 10001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    width: 80px;
+    margin-bottom: 20px;
+    animation: pulseLogo 2s infinite;
+}
+
+.loader-bar {
+    width: 200px;
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--gradient-gold);
+    transition: width 0.5s ease;
+}
+
+@keyframes pulseLogo {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* ===== STICKY PARALLAX SECTIONS ===== */
+/* Enhancing existing sections */
+.section-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 50px;
+}
+
+.section-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: var(--gradient-gold);
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+}
+
+.section-header:hover .section-label::before {
+    width: 60px;
+}
+
+/* Mobile Responsive Fixes for New Elements */
+@media (max-width: 768px) {
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
+    /* Hide custom cursor on touch */
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+        opacity: 0.2;
+    }
+
+    .hero-card {
+        transform: none !important;
+    }
+
+    .float-badge {
+        transform: translateZ(0) !important;
+        animation: none;
+        position: static;
+        margin-bottom: 10px;
+        display: inline-flex;
+    }
+
+    .hero-visual {
+        text-align: center;
+    }
+}

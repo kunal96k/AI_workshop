@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Workshop | 15-16 April 2026 | Capernaum Solutions Pvt. Ltd</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description"
+        content="Join our FREE 2-Day Artificial Intelligence Workshop on 15-16 April 2026. Learn Deep Learning, Machine Learning, ChatGPT, and work on live AI projects. Get a participation certificate. Venue: East Court Phoenix Mall, Viman Nagar, Pune.">
+    <meta name="keywords"
+        content="AI Workshop Pune, Free AI Workshop, Artificial Intelligence Training, Machine Learning, Deep Learning, ChatGPT Workshop, Capernaum Solutions, TechnoKraft, Viman Nagar Pune">
+    <meta name="author" content="Capernaum Solutions Pvt. Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://capernaumsolutions.com/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="FREE 2-Day AI Workshop | 15-16 April 2026 | Pune">
+    <meta property="og:description"
+        content="Learn AI, Machine Learning, Deep Learning & ChatGPT in a hands-on 2-day workshop. Free participation certificate included!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="files/WhatsApp Image 2026-04-03 at 11.11.04 AM.jpeg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FREE 2-Day AI Workshop | Capernaum Solutions">
+    <meta name="twitter:description"
+        content="2 Days Free AI Workshop - Deep Learning, Machine Learning, ChatGPT & Live Projects. 15-16 April 2026, Pune.">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationEvent",
+        "name": "2 Days Free Workshop on Artificial Intelligence",
+        "description": "A comprehensive 2-day free workshop covering Deep Learning, Machine Learning, AI fundamentals, ChatGPT, and hands-on live AI projects.",
+        "startDate": "2026-04-15T11:00:00+05:30",
+        "endDate": "2026-04-16T17:00:00+05:30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": "Capernaum Solutions Pvt. Ltd",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "507, 5th Floor, East Court Phoenix Mall",
+                "addressLocality": "Viman Nagar",
+                "addressRegion": "Maharashtra",
+                "postalCode": "411014",
+                "addressCountry": "IN"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Capernaum Solutions Pvt. Ltd",
+            "url": "https://capernaumsolutions.com"
+        },
+        "isAccessibleForFree": true,
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/workshop.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="loader-logo">
+            <div class="loader-bar">
+                <div class="loader-progress" id="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- ========== POPUP ENQUIRY MODAL ========== -->
+    <div class="ws-popup-overlay" id="wsPopupOverlay">
+        <div class="ws-popup-modal">
+            <div class="ws-popup-header">
+                <button class="ws-popup-close" id="wsPopupClose" aria-label="Close popup">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+                <div class="ws-popup-badge"><ion-icon name="gift-outline"></ion-icon> FREE WORKSHOP</div>
+                <h3>Register for <span>AI Workshop</span></h3>
+                <p>15-16 April 2026 · 11:00 AM · Viman Nagar, Pune</p>
+            </div>
+            <div class="ws-popup-body" id="wsPopupFormBody">
+                <form id="wsPopupForm">
+                    <div class="ws-form-grid">
+                        <div class="ws-form-group">
+                            <label for="popupName">Full Name <span class="ws-req">*</span></label>
+                            <input type="text" id="popupName" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="ws-form-group">
+                            <label for="popupPhone">Phone Number <span class="ws-req">*</span></label>
+                            <input type="tel" id="popupPhone" name="phone" placeholder="10-digit phone" required
+                                pattern="[0-9]{10}" maxlength="10">
+                        </div>
+                        <div class="ws-form-group">
+                            <label for="popupEmail">Email Address</label>
+                            <input type="email" id="popupEmail" name="email" placeholder="Your email">
+                        </div>
+                        <div class="ws-form-group">
+                            <label for="popupQual">Qualification</label>
+                            <select id="popupQual" name="qualification">
+                                <option value="" disabled selected>Select</option>
+                                <option value="12th">12th Pass</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="graduate">Graduate</option>
+                                <option value="postgraduate">Post Graduate</option>
+                                <option value="working">Working Professional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="ws-popup-submit" id="wsPopupSubmitBtn">
+                        <ion-icon name="rocket-outline"></ion-icon> Enroll Now — It's Free!
+                    </button>
+                    <div class="ws-popup-footer-note">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon> Secure & spam-free. Limited seats
+                        available.
+                    </div>
+                </form>
+            </div>
+            <div class="ws-popup-success" id="wsPopupSuccess">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <h3>You're Registered! 🎉</h3>
+                <p>Our team will contact you shortly with workshop details. See you on 15 April!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="scene-3d">
+        <div class="float-shape"></div>
+        <div class="float-shape"></div>
+        <div class="float-shape"></div>
+        <div class="float-shape"></div>
+        <div class="float-shape"></div>
+    </div>
+    <div class="grid-pattern"></div>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/capernaum_12.png" alt="Capernaum Solutions Pvt. Ltd" class="logo-img">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <div class="sidebar-logo">
+                    <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
+                </div>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="customer-support.html">Customer Support</a>
+                        <a href="quality-assurance.html">Quality Assurance</a>
+                        <a href="lead-generation.html">Lead Generation</a>
+                        <a href="it-solutions.html">IT Solutions</a>
+                        <a href="digital-marketing.html">Digital Marketing</a>
+                        <a href="market-research.html">Market Research</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="courses.html" class="dropdown-toggle">Courses</a>
+                    <div class="dropdown-menu">
+                        <a href="courses.html#fullstack">Full Stack Development</a>
+                        <a href="courses.html#data-science">Data Science</a>
+                        <a href="courses.html#linux">Linux Administration</a>
+                        <a href="courses.html#data-analytics">Data Analytics</a>
+                        <a href="courses.html#app-dev">App & Web Dev</a>
+                        <a href="courses.html#networking">Networking (CCNA)</a>
+                    </div>
+                </div>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html" class="nav-cta">Contact Us</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- ========== WORKSHOP HERO ========== -->
+    <section class="ws-hero" id="ws-hero">
+        <div class="ws-hero-particles">
+            <div class="ws-particle"></div>
+            <div class="ws-particle"></div>
+            <div class="ws-particle"></div>
+            <div class="ws-particle"></div>
+            <div class="ws-particle"></div>
+            <div class="ws-particle"></div>
+        </div>
+        <div class="container">
+            <div class="ws-hero-grid">
+                <div class="ws-hero-content">
+                    <div class="ws-badge-row">
+                        <span class="ws-badge ws-badge-free"><ion-icon name="gift-outline"></ion-icon> FREE
+                            WORKSHOP</span>
+                        <span class="ws-badge ws-badge-days"><ion-icon name="calendar-outline"></ion-icon> 2 DAYS</span>
+                    </div>
+                    <h1>2 Days Free Workshop on <span class="ws-gradient-text">Artificial Intelligence</span></h1>
+                    <p class="ws-hero-desc">Don't miss the opportunity to discover the limitless potential of AI. Let us
+                        together explore the power of Artificial Intelligence with hands-on projects and expert
+                        guidance.</p>
+                    <div class="ws-hero-meta">
+                        <div class="ws-meta-item">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <div>
+                                <strong>15 - 16 April 2026</strong>
+                                <span>Tuesday & Wednesday</span>
+                            </div>
+                        </div>
+                        <div class="ws-meta-item">
+                            <ion-icon name="time-outline"></ion-icon>
+                            <div>
+                                <strong>11:00 AM Onwards</strong>
+                                <span>Full Day Sessions</span>
+                            </div>
+                        </div>
+                        <div class="ws-meta-item">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <div>
+                                <strong>Viman Nagar, Pune</strong>
+                                <span>East Court Phoenix Mall</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ws-hero-actions">
+                        <a href="#ws-enquiry" class="btn-primary ws-btn-glow" id="heroEnrollBtn">
+                            <ion-icon name="rocket-outline"></ion-icon> Enroll Now — It's Free!
+                        </a>
+                        <a href="tel:8956745093" class="btn-secondary ws-btn-call">
+                            <ion-icon name="call-outline"></ion-icon> Call: 8956745093
+                        </a>
+                    </div>
+                </div>
+                <div class="ws-hero-visual">
+                    <div class="ws-poster-card">
+                        <img src="files/WhatsApp Image 2026-04-03 at 11.11.04 AM.jpeg"
+                            alt="AI Workshop Poster - 2 Days Free Workshop on Artificial Intelligence, 15-16 April 2026"
+                            class="ws-poster-img" loading="eager">
+                        <div class="ws-poster-glow"></div>
+                    </div>
+                    <!-- Countdown Timer -->
+                    <div class="ws-countdown" id="wsCountdown">
+                        <h4>Workshop Starts In</h4>
+                        <div class="ws-countdown-grid">
+                            <div class="ws-cd-item">
+                                <span class="ws-cd-num" id="cdDays">00</span>
+                                <span class="ws-cd-label">Days</span>
+                            </div>
+                            <div class="ws-cd-sep">:</div>
+                            <div class="ws-cd-item">
+                                <span class="ws-cd-num" id="cdHours">00</span>
+                                <span class="ws-cd-label">Hours</span>
+                            </div>
+                            <div class="ws-cd-sep">:</div>
+                            <div class="ws-cd-item">
+                                <span class="ws-cd-num" id="cdMins">00</span>
+                                <span class="ws-cd-label">Mins</span>
+                            </div>
+                            <div class="ws-cd-sep">:</div>
+                            <div class="ws-cd-item">
+                                <span class="ws-cd-num" id="cdSecs">00</span>
+                                <span class="ws-cd-label">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WORKSHOP SCHEDULE ========== -->
+    <section class="ws-schedule" id="ws-schedule">
+        <div class="container">
+            <div class="section-header reveal-flip">
+                <div class="section-label">Workshop Agenda</div>
+                <h2 class="section-title">What You'll <span class="gradient-text">Learn</span></h2>
+                <p class="section-subtitle">A power-packed 2-day curriculum designed by industry experts to give you a
+                    comprehensive understanding of AI and its real-world applications.</p>
+            </div>
+            <div class="ws-schedule-grid">
+                <!-- Day 1 -->
+                <div class="ws-day-card reveal reveal-delay-1">
+                    <div class="ws-day-header">
+                        <div class="ws-day-badge">Day 1</div>
+                        <div class="ws-day-date">
+                            <ion-icon name="calendar-outline"></ion-icon> 15 April 2026
+                        </div>
+                    </div>
+                    <ul class="ws-topics">
+                        <li>
+                            <div class="ws-topic-icon"><ion-icon name="bulb-outline"></ion-icon></div>
+                            <div>
+                                <h4>Introduction to AI Technologies</h4>
+                                <p>Deep Learning, Machine Learning & Artificial Intelligence fundamentals</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ws-topic-icon"><ion-icon name="git-branch-outline"></ion-icon></div>
+                            <div>
+                                <h4>SDLC — Software Development Life Cycle</h4>
+                                <p>Understand the complete software development process and methodologies</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ws-topic-icon"><ion-icon name="trending-up-outline"></ion-icon></div>
+                            <div>
+                                <h4>Benefits & Scope of AI</h4>
+                                <p>Explore career opportunities and industry applications of AI</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Day 2 -->
+                <div class="ws-day-card reveal reveal-delay-2">
+                    <div class="ws-day-header">
+                        <div class="ws-day-badge ws-day-badge-2">Day 2</div>
+                        <div class="ws-day-date">
+                            <ion-icon name="calendar-outline"></ion-icon> 16 April 2026
+                        </div>
+                    </div>
+                    <ul class="ws-topics">
+                        <li>
+                            <div class="ws-topic-icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
+                            <div>
+                                <h4>ChatGPT & Generative AI</h4>
+                                <p>Hands-on experience with ChatGPT and prompt engineering techniques</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ws-topic-icon"><ion-icon name="briefcase-outline"></ion-icon></div>
+                            <div>
+                                <h4>Job Verticals in AI</h4>
+                                <p>Discover high-paying career paths and roles in the AI industry</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ws-topic-icon"><ion-icon name="code-slash-outline"></ion-icon></div>
+                            <div>
+                                <h4>Live Project on AI</h4>
+                                <p>Build a real AI project from scratch with expert mentorship</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TAKEAWAYS ========== -->
+    <section class="ws-takeaways" id="ws-takeaways">
+        <div class="container">
+            <div class="section-header reveal-scale">
+                <div class="section-label">Why Attend</div>
+                <h2 class="section-title">What You'll <span class="gradient-text">Take Away</span></h2>
+                <p class="section-subtitle">Our workshop is designed to deliver maximum value — from career guidance to
+                    hands-on experience and an official certificate.</p>
+            </div>
+            <div class="ws-takeaway-grid">
+                <div class="ws-takeaway-card reveal reveal-delay-1">
+                    <div class="ws-ta-icon"><ion-icon name="school-outline"></ion-icon></div>
+                    <h3>Top Class Teaching</h3>
+                    <p>Learn from experienced industry professionals who bring real-world expertise to every session.
+                    </p>
+                </div>
+                <div class="ws-takeaway-card reveal reveal-delay-2">
+                    <div class="ws-ta-icon"><ion-icon name="compass-outline"></ion-icon></div>
+                    <h3>Career Guidance</h3>
+                    <p>Get skill-based career counseling and understand the right path to enter the AI industry.</p>
+                </div>
+                <div class="ws-takeaway-card reveal reveal-delay-3">
+                    <div class="ws-ta-icon"><ion-icon name="construct-outline"></ion-icon></div>
+                    <h3>Hands-On Live Project</h3>
+                    <p>Work on a real AI project, apply what you learn, and build your portfolio from day one.</p>
+                </div>
+                <div class="ws-takeaway-card reveal reveal-delay-1">
+                    <div class="ws-ta-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                    <h3>Participation Certificate</h3>
+                    <p>Receive an official certificate of participation to add to your resume and LinkedIn profile.</p>
+                </div>
+                <div class="ws-takeaway-card reveal reveal-delay-2">
+                    <div class="ws-ta-icon"><ion-icon name="rocket-outline"></ion-icon></div>
+                    <h3>Practical Skills</h3>
+                    <p>Gain practical, applicable skills for real-world scenarios that employers are actively seeking.
+                    </p>
+                </div>
+                <div class="ws-takeaway-card reveal reveal-delay-3">
+                    <div class="ws-ta-icon"><ion-icon name="people-outline"></ion-icon></div>
+                    <h3>Networking</h3>
+                    <p>Connect with like-minded learners, mentors, and industry professionals during the workshop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VENUE & MAP ========== -->
+    <section class="ws-venue" id="ws-venue">
+        <div class="container">
+            <div class="section-header reveal-flip">
+                <div class="section-label">Location</div>
+                <h2 class="section-title">Workshop <span class="gradient-text">Venue</span></h2>
+            </div>
+            <div class="ws-venue-grid">
+                <div class="ws-venue-info reveal reveal-delay-1">
+                    <div class="ws-venue-card">
+                        <div class="ws-venue-detail">
+                            <ion-icon name="business-outline"></ion-icon>
+                            <div>
+                                <h4>Capernaum Solutions Pvt. Ltd</h4>
+                                <p>507, 5th Floor, East Court Phoenix Mall,<br>Viman Nagar, Pune, Maharashtra -
+                                    411014</p>
+                            </div>
+                        </div>
+                        <div class="ws-venue-detail">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <div>
+                                <h4>Date & Time</h4>
+                                <p>15 - 16 April 2026 | 11:00 AM Onwards</p>
+                            </div>
+                        </div>
+                        <div class="ws-venue-detail">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <div>
+                                <h4>Contact</h4>
+                                <p><a href="tel:8956745093" style="color: var(--gold-dark); font-weight:600;">+91
+                                        8956745093</a></p>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=507+5th+Floor+East+Court+Phoenix+Mall+Viman+Nagar+Pune+Maharashtra+411014"
+                            target="_blank" class="btn-secondary" style="margin-top: 16px; display: inline-flex;">
+                            <ion-icon name="navigate-outline"></ion-icon> Get Directions
+                        </a>
+                    </div>
+                </div>
+                <div class="ws-venue-map reveal reveal-delay-2">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.3!2d73.9141!3d18.5679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM0JzA0LjQiTiA3M8KwNTQnNTAuOCJF!5e0!3m2!1sen!2sin!4v1680500000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0; border-radius: var(--radius-lg);" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Capernaum Solutions Location - Viman Nagar Pune"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ASSOCIATION BANNER ========== -->
+    <section class="ws-association">
+        <div class="container">
+            <div class="ws-assoc-banner reveal-scale">
+                <p class="ws-assoc-label">In Association With</p>
+                <a href="https://tts.net.in/" target="_blank" rel="noopener" class="ws-assoc-link">
+                    <img src="images/logowithtext.png" alt="TechnoKraft Training & Solution Pvt. Ltd"
+                        class="ws-assoc-logo">
+                </a>
+                <p class="ws-assoc-desc">
+                    <a href="https://tts.net.in/" target="_blank" rel="noopener"
+                        style="color: var(--gold-dark); font-weight:600;">TechnoKraft Training & Solution Pvt. Ltd</a>
+                    — Empowering technology education and professional development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ENQUIRY FORM ========== -->
+    <section class="ws-enquiry" id="ws-enquiry">
+        <div class="container">
+            <div class="section-header reveal-flip">
+                <div class="section-label">Register Now</div>
+                <h2 class="section-title">Enquire & <span class="gradient-text">Enroll</span></h2>
+                <p class="section-subtitle">Seats are limited! Fill in your details below and our team will get back to
+                    you with all the information you need.</p>
+            </div>
+            <div class="ws-form-wrapper reveal-scale">
+                <form class="ws-form" id="workshopForm">
+                    <div class="ws-form-grid">
+                        <div class="ws-form-group">
+                            <label for="wsName">Full Name <span class="ws-req">*</span></label>
+                            <input type="text" id="wsName" name="name" placeholder="Enter your full name" required
+                                autocomplete="name">
+                        </div>
+                        <div class="ws-form-group">
+                            <label for="wsEmail">Email Address <span class="ws-req">*</span></label>
+                            <input type="email" id="wsEmail" name="email" placeholder="Enter your email" required
+                                autocomplete="email">
+                        </div>
+                        <div class="ws-form-group">
+                            <label for="wsPhone">Phone Number <span class="ws-req">*</span></label>
+                            <input type="tel" id="wsPhone" name="phone" placeholder="Enter your phone number" required
+                                autocomplete="tel" pattern="[0-9]{10}" maxlength="10">
+                        </div>
+                        <div class="ws-form-group">
+                            <label for="wsQualification">Qualification</label>
+                            <select id="wsQualification" name="qualification">
+                                <option value="" disabled selected>Select your qualification</option>
+                                <option value="10th">10th Pass</option>
+                                <option value="12th">12th Pass</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="graduate">Graduate</option>
+                                <option value="postgraduate">Post Graduate</option>
+                                <option value="working">Working Professional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ws-form-group ws-form-full">
+                        <label for="wsMessage">Message / Questions (Optional)</label>
+                        <textarea id="wsMessage" name="message" rows="4"
+                            placeholder="Any questions about the workshop?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary ws-submit-btn" id="wsSubmitBtn">
+                        <ion-icon name="paper-plane-outline"></ion-icon> Submit Enquiry
+                    </button>
+                    <div class="ws-form-note">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon> Your information is secure and will only
+                        be
+                        used for workshop registration.
+                    </div>
+                </form>
+                <!-- Success Message -->
+                <div class="ws-form-success" id="wsFormSuccess">
+                    <div class="ws-success-icon"><ion-icon name="checkmark-circle-outline"></ion-icon></div>
+                    <h3>Thank You!</h3>
+                    <p>Your enquiry has been submitted successfully. Our team will contact you shortly with workshop
+                        details.</p>
+                    <a href="tel:8956745093" class="btn-secondary"
+                        style="margin-top: 16px; display:inline-flex; gap: 8px;">
+                        <ion-icon name="call-outline"></ion-icon> Call Now: 8956745093
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="ws-faq">
+        <div class="ws-faq-container">
+            <div class="ws-faq-header text-center">
+                <div class="ws-badge" style="margin: 0 auto 16px; color: var(--gold-dark); background: rgba(200,164,94,0.12); border: 1px solid rgba(200,164,94,0.25);"><ion-icon name="help-circle-outline"></ion-icon> FAQ</div>
+                <h2>Frequently Asked <span class="ws-gradient-text">Questions</span></h2>
+            </div>
+            
+            <div class="ws-faq-list">
+                <div class="ws-faq-item">
+                    <button class="ws-faq-question">
+                        <span>Is this workshop really free?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="ws-faq-answer">
+                        <p>Yes! The 2-day workshop is absolutely free. There are no registration fees or hidden charges. Our goal is to spread awareness about AI and its future scope.</p>
+                    </div>
+                </div>
+                
+                <div class="ws-faq-item">
+                    <button class="ws-faq-question">
+                        <span>Do I need prior programming experience?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="ws-faq-answer">
+                        <p>Not at all. The workshop is designed to cover concepts from basic to advanced levels. Beginners and non-IT backgrounds are highly encouraged to attend!</p>
+                    </div>
+                </div>
+                
+                <div class="ws-faq-item">
+                    <button class="ws-faq-question">
+                        <span>Will I get a certificate?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="ws-faq-answer">
+                        <p>Yes, all participants who complete both days of the workshop will receive an official Participation Certificate from Capernaum Solutions and TechnoKraft.</p>
+                    </div>
+                </div>
+                
+                <div class="ws-faq-item">
+                    <button class="ws-faq-question">
+                        <span>Should I bring my laptop?</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </button>
+                    <div class="ws-faq-answer">
+                        <p>While not strictly mandatory, we highly recommend bringing a laptop (if you have one) for Day 2 so you can participate in the practical hands-on session.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FLOATING CTA BAR (Mobile) ========== -->
+    <div class="ws-floating-cta" id="wsFloatingCta">
+        <a href="#ws-enquiry" class="ws-float-btn ws-float-enroll">
+            <ion-icon name="rocket-outline"></ion-icon> Enroll Free
+        </a>
+        <a href="tel:8956745093" class="ws-float-btn ws-float-call">
+            <ion-icon name="call-outline"></ion-icon> Call Now
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
+                    </div>
+                    <p>We are committed to transparency, integrity, and clear communication, forming long-term
+                        partnerships through trust, consistency, and excellence in service.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/people/Capernaum-Solutions/61577803556763/" target="_blank"
+                            aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://www.instagram.com/capernaumsolutions_official" target="_blank"
+                            aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Training</h4>
+                    <a href="courses.html#fullstack">Full Stack Dev</a>
+                    <a href="courses.html#data-science">Data Science</a>
+                    <a href="courses.html#app-dev">App Development</a>
+                    <a href="courses.html#networking">CCNA</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="careers.html">Careers</a>
+                    <a href="#ws-enquiry">AI Workshop</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Capernaum Solutions Pvt. Ltd. All rights reserved. | Place of Support</p>
+                <p>Designed by <a href="https://www.technokraftservices.com/" target="_blank" rel="noopener">Technokraft
+                        Services LLP</a></p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <!-- ========== CHATBOT ========== -->
+    <div class="ws-chatbot" id="wsChatbot">
+        <div class="ws-chat-toggle" id="wsChatToggle" aria-label="Open chat assistant">
+            <ion-icon name="chatbubbles-outline" class="ws-chat-icon-open"></ion-icon>
+            <ion-icon name="close-outline" class="ws-chat-icon-close"></ion-icon>
+            <span class="ws-chat-pulse"></span>
+        </div>
+        <div class="ws-chat-window" id="wsChatWindow">
+            <div class="ws-chat-header">
+                <div class="ws-chat-avatar">
+                    <img src="images/favicon.png" alt="Capernaum Bot">
+                </div>
+                <div class="ws-chat-header-info">
+                    <h4>Capernaum Assistant</h4>
+                    <span class="ws-chat-status"><span class="ws-status-dot"></span> Online</span>
+                </div>
+                <button class="ws-chat-close" id="wsChatClose" aria-label="Close chat">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="ws-chat-body" id="wsChatBody">
+                <!-- Messages will be injected here by JS -->
+            </div>
+            <div class="ws-chat-suggestions" id="wsChatSuggestions">
+                <!-- Quick reply buttons injected by JS -->
+            </div>
+            <div class="ws-chat-input-area">
+                <input type="text" class="ws-chat-input" id="wsChatInput" placeholder="Type your question..."
+                    autocomplete="off">
+                <button class="ws-chat-send" id="wsChatSend" aria-label="Send message">
+                    <ion-icon name="send-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/workshop.js"></script>
+</body>
+
+</html>
