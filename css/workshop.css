@@ -5,13 +5,14 @@
 
 /* ===== NAVBAR ON DARK HERO — WHITE TEXT ON DESKTOP ===== */
 @media (min-width: 769px) {
-    .dark-hero-page .navbar:not(.scrolled) .nav-links > a,
+
+    .dark-hero-page .navbar:not(.scrolled) .nav-links>a,
     .dark-hero-page .navbar:not(.scrolled) .nav-links .dropdown-toggle {
         color: rgba(255, 255, 255, 0.85);
     }
 
-    .dark-hero-page .navbar:not(.scrolled) .nav-links > a:hover,
-    .dark-hero-page .navbar:not(.scrolled) .nav-links > a.active,
+    .dark-hero-page .navbar:not(.scrolled) .nav-links>a:hover,
+    .dark-hero-page .navbar:not(.scrolled) .nav-links>a.active,
     .dark-hero-page .navbar:not(.scrolled) .nav-links .dropdown-toggle:hover {
         color: #ffffff;
     }
@@ -92,10 +93,8 @@
 }
 
 .ws-popup-header h3 span {
-    background: linear-gradient(135deg, var(--gold), #e8d5a3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffd700;
+    /* Solid gold for better visibility on dark headers */
 }
 
 .ws-popup-header p {
@@ -120,7 +119,9 @@
     margin-bottom: 12px;
 }
 
-.ws-popup-badge ion-icon { font-size: 13px; }
+.ws-popup-badge ion-icon {
+    font-size: 13px;
+}
 
 .ws-popup-close {
     position: absolute;
@@ -145,7 +146,9 @@
     transform: rotate(90deg);
 }
 
-.ws-popup-close ion-icon { font-size: 20px; }
+.ws-popup-close ion-icon {
+    font-size: 20px;
+}
 
 .ws-popup-body {
     padding: 28px 32px 32px;
@@ -241,7 +244,9 @@
     padding: 32px;
 }
 
-.ws-popup-success.active { display: block; }
+.ws-popup-success.active {
+    display: block;
+}
 
 .ws-popup-success ion-icon {
     font-size: 56px;
@@ -262,11 +267,25 @@
 }
 
 @media (max-width: 520px) {
-    .ws-popup-modal { margin: 12px; }
-    .ws-popup-header { padding: 24px 20px; }
-    .ws-popup-header h3 { font-size: 18px; }
-    .ws-popup-body { padding: 20px; }
-    .ws-popup-body .ws-form-grid { grid-template-columns: 1fr; }
+    .ws-popup-modal {
+        margin: 12px;
+    }
+
+    .ws-popup-header {
+        padding: 24px 20px;
+    }
+
+    .ws-popup-header h3 {
+        font-size: 18px;
+    }
+
+    .ws-popup-body {
+        padding: 20px;
+    }
+
+    .ws-popup-body .ws-form-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== HERO SECTION ===== */
@@ -322,18 +341,79 @@
     animation: wsParticleFloat 15s infinite ease-in-out;
 }
 
-.ws-particle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; animation-duration: 18s; }
-.ws-particle:nth-child(2) { top: 40%; left: 80%; animation-delay: -3s; animation-duration: 22s; width: 6px; height: 6px; background: rgba(124, 58, 237, 0.4); }
-.ws-particle:nth-child(3) { top: 70%; left: 30%; animation-delay: -7s; animation-duration: 20s; }
-.ws-particle:nth-child(4) { top: 25%; left: 60%; animation-delay: -5s; animation-duration: 16s; width: 3px; height: 3px; background: rgba(37, 99, 235, 0.5); }
-.ws-particle:nth-child(5) { top: 80%; left: 70%; animation-delay: -10s; animation-duration: 25s; width: 5px; height: 5px; }
-.ws-particle:nth-child(6) { top: 55%; left: 15%; animation-delay: -2s; animation-duration: 19s; background: rgba(124, 58, 237, 0.3); }
+.ws-particle:nth-child(1) {
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.ws-particle:nth-child(2) {
+    top: 40%;
+    left: 80%;
+    animation-delay: -3s;
+    animation-duration: 22s;
+    width: 6px;
+    height: 6px;
+    background: rgba(124, 58, 237, 0.4);
+}
+
+.ws-particle:nth-child(3) {
+    top: 70%;
+    left: 30%;
+    animation-delay: -7s;
+    animation-duration: 20s;
+}
+
+.ws-particle:nth-child(4) {
+    top: 25%;
+    left: 60%;
+    animation-delay: -5s;
+    animation-duration: 16s;
+    width: 3px;
+    height: 3px;
+    background: rgba(37, 99, 235, 0.5);
+}
+
+.ws-particle:nth-child(5) {
+    top: 80%;
+    left: 70%;
+    animation-delay: -10s;
+    animation-duration: 25s;
+    width: 5px;
+    height: 5px;
+}
+
+.ws-particle:nth-child(6) {
+    top: 55%;
+    left: 15%;
+    animation-delay: -2s;
+    animation-duration: 19s;
+    background: rgba(124, 58, 237, 0.3);
+}
 
 @keyframes wsParticleFloat {
-    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-    25% { transform: translate(30px, -50px) scale(1.5); opacity: 0.8; }
-    50% { transform: translate(-20px, -30px) scale(0.8); opacity: 0.3; }
-    75% { transform: translate(40px, 20px) scale(1.2); opacity: 0.7; }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+
+    25% {
+        transform: translate(30px, -50px) scale(1.5);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-20px, -30px) scale(0.8);
+        opacity: 0.3;
+    }
+
+    75% {
+        transform: translate(40px, 20px) scale(1.2);
+        opacity: 0.7;
+    }
 }
 
 /* Hero Grid */
@@ -381,7 +461,9 @@
     color: var(--gold-light);
 }
 
-.ws-badge ion-icon { font-size: 14px; }
+.ws-badge ion-icon {
+    font-size: 14px;
+}
 
 /* Hero Text */
 .ws-hero h1 {
@@ -469,23 +551,35 @@
     left: -60%;
     width: 40%;
     height: 200%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
     transform: skewX(-20deg);
     animation: wsShimmerBtn 4s infinite;
 }
 
 @keyframes wsShimmerBtn {
-    0% { left: -60%; }
-    100% { left: 140%; }
+    0% {
+        left: -60%;
+    }
+
+    100% {
+        left: 140%;
+    }
 }
 
 @keyframes wsBtnPulse {
-    0%, 100% { box-shadow: 0 8px 32px rgba(200, 164, 94, 0.25); }
-    50% { box-shadow: 0 8px 48px rgba(200, 164, 94, 0.45); }
+
+    0%,
+    100% {
+        box-shadow: 0 8px 32px rgba(200, 164, 94, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 8px 48px rgba(200, 164, 94, 0.45);
+    }
 }
 
 .ws-btn-call {
-    border-color: rgba(255,255,255,0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
     color: #fff !important;
 }
 
@@ -497,8 +591,15 @@
 
 /* Hero Animations */
 @keyframes wsSlideUpFade {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .ws-hero-content {
@@ -506,7 +607,7 @@
     z-index: 2;
 }
 
-.ws-hero-content > * {
+.ws-hero-content>* {
     opacity: 0;
     transform: translateY(40px);
 }
@@ -697,8 +798,13 @@ body.loaded .ws-hero-visual {
 
 /* Hiring Partners Scroll Animation */
 @keyframes scrollLogos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ===== SCHEDULE SECTION ===== */
@@ -780,7 +886,10 @@ body.loaded .ws-hero-visual {
     font-weight: 500;
 }
 
-.ws-day-date ion-icon { font-size: 16px; color: var(--gold); }
+.ws-day-date ion-icon {
+    font-size: 16px;
+    color: var(--gold);
+}
 
 .ws-topics {
     list-style: none;
@@ -933,7 +1042,7 @@ body.loaded .ws-hero-visual {
     align-items: flex-start;
 }
 
-.ws-venue-detail > ion-icon {
+.ws-venue-detail>ion-icon {
     font-size: 24px;
     color: var(--gold);
     margin-top: 4px;
@@ -993,70 +1102,87 @@ body.loaded .ws-hero-visual {
     gap: 16px;
 }
 
-.ws-faq-item {
+/* Override Bootstrap Accordion for Premium Look */
+.ws-faq-container .accordion-item {
     background: var(--bg-card);
     border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-lg) !important;
+    margin-bottom: 16px;
     overflow: hidden;
     transition: var(--transition);
 }
 
-.ws-faq-item:hover {
+.ws-faq-container .accordion-item:hover {
     border-color: rgba(200, 164, 94, 0.3);
     box-shadow: var(--shadow-sm);
 }
 
-.ws-faq-item.active {
-    border-color: var(--gold);
-    box-shadow: 0 10px 30px rgba(200, 164, 94, 0.1);
-}
-
-.ws-faq-question {
-    width: 100%;
-    text-align: left;
+.ws-faq-container .accordion-button {
     padding: 24px 30px;
-    background: transparent;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 16px;
     font-weight: 700;
     color: var(--text-primary);
-    cursor: pointer;
-    font-family: var(--font);
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
     transition: var(--transition);
 }
 
-.ws-faq-item.active .ws-faq-question {
-    color: var(--gold-dark);
-}
-
-.ws-faq-question ion-icon {
-    font-size: 20px;
-    color: var(--gold);
+.ws-faq-container .accordion-button::after {
+    background-image: none;
+    content: '\f0d7';
+    /* Font Awesome or Ionicons fallback but we use standard CSS arrow if needed */
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    transform: rotate(0deg);
     transition: transform 0.3s ease;
+    background-color: transparent;
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    margin-right: 5px;
 }
 
-.ws-faq-item.active .ws-faq-question ion-icon {
-    transform: rotate(180deg);
+.ws-faq-container .accordion-button:not(.collapsed) {
+    color: var(--gold-dark);
+    background-color: rgba(200, 164, 94, 0.03);
 }
 
-.ws-faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
-    padding: 0 30px;
-    background: rgba(200, 164, 94, 0.03);
+.ws-faq-container .accordion-button:not(.collapsed)::after {
+    transform: rotate(-135deg);
+    margin-top: 5px;
 }
 
-.ws-faq-answer p {
+.ws-faq-container .accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--gold);
+}
+
+.ws-faq-container .accordion-body {
+    padding: 0 30px 24px;
+    background: transparent;
+}
+
+.ws-faq-container .ws-faq-answer p {
     font-size: 15px;
     color: var(--text-secondary);
     line-height: 1.7;
     margin: 0;
-    padding-bottom: 24px;
 }
+
+
+.ws-faq-answer {
+    padding: 0;
+    /* Bootstrap handles this now in accordion-body */
+}
+
 
 /* ===== ASSOCIATION SECTION ===== */
 .ws-association {
@@ -1127,7 +1253,9 @@ body.loaded .ws-hero-visual {
 .ws-form-wrapper::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 4px;
     background: var(--gradient-gold);
 }
@@ -1152,7 +1280,9 @@ body.loaded .ws-hero-visual {
     letter-spacing: 0.3px;
 }
 
-.ws-req { color: #e53e3e; }
+.ws-req {
+    color: #e53e3e;
+}
 
 .ws-form-group input,
 .ws-form-group select,
@@ -1227,7 +1357,9 @@ body.loaded .ws-hero-visual {
     margin-bottom: 16px;
 }
 
-.ws-form-success .ws-success-icon ion-icon { font-size: 64px; }
+.ws-form-success .ws-success-icon ion-icon {
+    font-size: 64px;
+}
 
 .ws-form-success h3 {
     font-size: 24px;
@@ -1345,11 +1477,20 @@ body.loaded .ws-hero-visual {
     animation: wsChatPulse 2s infinite;
 }
 
-.ws-chatbot.open .ws-chat-pulse { display: none; }
+.ws-chatbot.open .ws-chat-pulse {
+    display: none;
+}
 
 @keyframes wsChatPulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 /* Chat Window */
@@ -1416,7 +1557,7 @@ body.loaded .ws-hero-visual {
     align-items: center;
     gap: 5px;
     font-size: 11px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .ws-status-dot {
@@ -1429,13 +1570,20 @@ body.loaded .ws-hero-visual {
 }
 
 @keyframes wsDotBlink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
 }
 
 .ws-chat-close {
     margin-left: auto;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border: none;
     color: #fff;
     width: 32px;
@@ -1448,8 +1596,13 @@ body.loaded .ws-hero-visual {
     transition: var(--transition);
 }
 
-.ws-chat-close:hover { background: rgba(255,255,255,0.2); }
-.ws-chat-close ion-icon { font-size: 18px; }
+.ws-chat-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.ws-chat-close ion-icon {
+    font-size: 18px;
+}
 
 /* Chat Body */
 .ws-chat-body {
@@ -1469,7 +1622,7 @@ body.loaded .ws-hero-visual {
 }
 
 .ws-chat-body::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.12);
+    background: rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
 
@@ -1482,12 +1635,25 @@ body.loaded .ws-hero-visual {
 }
 
 @keyframes wsMsgSlide {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.ws-msg-bot { align-self: flex-start; }
-.ws-msg-user { align-self: flex-end; flex-direction: row-reverse; }
+.ws-msg-bot {
+    align-self: flex-start;
+}
+
+.ws-msg-user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
 
 .ws-msg-avatar {
     width: 28px;
@@ -1541,12 +1707,27 @@ body.loaded .ws-hero-visual {
     animation: wsTypingBounce 1.4s infinite ease-in-out;
 }
 
-.ws-typing-dot:nth-child(2) { animation-delay: 0.16s; }
-.ws-typing-dot:nth-child(3) { animation-delay: 0.32s; }
+.ws-typing-dot:nth-child(2) {
+    animation-delay: 0.16s;
+}
+
+.ws-typing-dot:nth-child(3) {
+    animation-delay: 0.32s;
+}
 
 @keyframes wsTypingBounce {
-    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
-    40% { transform: scale(1); opacity: 1; }
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Chat Suggestions */
@@ -1621,45 +1802,137 @@ body.loaded .ws-hero-visual {
     flex-shrink: 0;
 }
 
-.ws-chat-send:hover { transform: scale(1.08); }
-.ws-chat-send ion-icon { font-size: 18px; color: var(--text-primary); }
+.ws-chat-send:hover {
+    transform: scale(1.08);
+}
+
+.ws-chat-send ion-icon {
+    font-size: 18px;
+    color: var(--text-primary);
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-    .ws-hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .ws-hero { padding: 130px 0 60px; min-height: auto; }
-    .ws-hero-content { text-align: center; }
-    .ws-hero-desc { margin-left: auto; margin-right: auto; }
-    .ws-hero-meta { justify-content: center; }
-    .ws-hero-actions { justify-content: center; }
-    .ws-badge-row { justify-content: center; }
-    .ws-poster-card { max-width: 480px; margin: 0 auto; }
-    .ws-schedule-grid { grid-template-columns: 1fr; }
-    .ws-venue-grid { grid-template-columns: 1fr; }
-    .ws-venue-map { min-height: 300px; }
+    .ws-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .ws-hero {
+        padding: 130px 0 60px;
+        min-height: auto;
+    }
+
+    .ws-hero-content {
+        text-align: center;
+    }
+
+    .ws-hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ws-hero-meta {
+        justify-content: center;
+    }
+
+    .ws-hero-actions {
+        justify-content: center;
+    }
+
+    .ws-badge-row {
+        justify-content: center;
+    }
+
+    .ws-poster-card {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .ws-schedule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ws-venue-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ws-venue-map {
+        min-height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
-    .ws-hero h1 { font-size: 30px; letter-spacing: -1px; }
-    .ws-hero-desc { font-size: 15px; }
-    .ws-hero-meta { flex-direction: column; gap: 12px; }
-    .ws-meta-item { min-width: unset; }
-    .ws-hero-actions { flex-direction: column; align-items: stretch; }
-    .ws-btn-glow, .ws-btn-call { justify-content: center; text-align: center; }
-    .ws-takeaway-grid { grid-template-columns: 1fr 1fr; }
-    .ws-form-grid { grid-template-columns: 1fr; }
-    .ws-form-wrapper { padding: 28px 20px; }
-    .ws-day-card { padding: 24px; }
-    .ws-cd-num { font-size: 28px; }
-    .ws-cd-item { min-width: 50px; }
-    .ws-countdown { padding: 16px; }
+    .ws-hero h1 {
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .ws-hero-desc {
+        font-size: 15px;
+    }
+
+    .ws-hero-meta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .ws-meta-item {
+        min-width: unset;
+    }
+
+    .ws-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ws-btn-glow,
+    .ws-btn-call {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ws-takeaway-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ws-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ws-form-wrapper {
+        padding: 28px 20px;
+    }
+
+    .ws-day-card {
+        padding: 24px;
+    }
+
+    .ws-cd-num {
+        font-size: 28px;
+    }
+
+    .ws-cd-item {
+        min-width: 50px;
+    }
+
+    .ws-countdown {
+        padding: 16px;
+    }
 
     /* Show floating CTA on mobile */
-    .ws-floating-cta { display: flex; }
-    .footer { padding-bottom: 80px; }
+    .ws-floating-cta {
+        display: flex;
+    }
+
+    .footer {
+        padding-bottom: 80px;
+    }
 
     /* Shift chatbot above floating bar */
-    .ws-chatbot { bottom: 80px; }
+    .ws-chatbot {
+        bottom: 80px;
+    }
 
     /* Chat window adjustments */
     .ws-chat-window {
@@ -1670,12 +1943,39 @@ body.loaded .ws-hero-visual {
 }
 
 @media (max-width: 480px) {
-    .ws-hero { padding: 120px 0 48px; }
-    .ws-hero h1 { font-size: 26px; }
-    .ws-takeaway-grid { grid-template-columns: 1fr; }
-    .ws-takeaway-card { padding: 24px; }
-    .ws-badge { font-size: 11px; padding: 5px 12px; }
-    .ws-assoc-banner { padding: 32px 20px; }
-    .ws-assoc-logo { max-height: 44px; }
-    .ws-schedule, .ws-takeaways, .ws-venue, .ws-enquiry { padding: 60px 0; }
+    .ws-hero {
+        padding: 120px 0 48px;
+    }
+
+    .ws-hero h1 {
+        font-size: 26px;
+    }
+
+    .ws-takeaway-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ws-takeaway-card {
+        padding: 24px;
+    }
+
+    .ws-badge {
+        font-size: 11px;
+        padding: 5px 12px;
+    }
+
+    .ws-assoc-banner {
+        padding: 32px 20px;
+    }
+
+    .ws-assoc-logo {
+        max-height: 44px;
+    }
+
+    .ws-schedule,
+    .ws-takeaways,
+    .ws-venue,
+    .ws-enquiry {
+        padding: 60px 0;
+    }
 }

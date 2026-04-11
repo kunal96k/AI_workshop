@@ -54,9 +54,8 @@
             color: #e8d5a3;
             letter-spacing: 0.5px;
         }
-        @media (max-width: 991px) {
-            .top-bar-left { display: none; }
-            .top-bar-inner { justify-content: center; }
+        @media (max-width: 1024px) {
+            .top-bar { display: none; }
         }
     </style>
 </head>
@@ -95,12 +94,23 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar" id="navbar" style="top: 38px;">
+    <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <img src="images/capernaum_12.png" alt="Capernaum Solutions Pvt. Ltd" class="logo-img">
+                <div class="association-block">
+                    <div class="assoc-label">Association With</div>
+                    <div class="assoc-brand">TechnoKraft Training & Solution Pvt. Ltd.</div>
+                </div>
             </a>
             <div class="nav-links" id="navLinks">
+                <div class="sidebar-logo">
+                    <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
+                    <div class="association-block">
+                        <div class="assoc-label">Association With</div>
+                        <div class="assoc-brand">TechnoKraft Training & Solution Pvt. Ltd.</div>
+                    </div>
+                </div>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <div class="dropdown">
@@ -159,16 +169,13 @@
                     <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 8px;">Enquire for Admission</h3>
                     <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 28px;">Fill out the form below and our counselor will contact you shortly.</p>
                     <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group"><label>First Name</label><input type="text" placeholder="Your Name" required></div>
-                            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Last Name" required></div>
-                        </div>
-                        <div class="form-group"><label>Email Address</label><input type="email" placeholder="email@example.com" required></div>
-                        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="10-digit number" required pattern="[0-9]{10}"></div>
+                        <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
+                        <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="email@example.com" required></div>
+                        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="10-digit number" required pattern="[0-9]{10}"></div>
                         <div class="form-group">
                             <label>Course Interested In</label>
-                            <select required>
-                                <option value="">Select a course...</option>
+                            <select name="course" required>
+                                <option value="" disabled selected>Select Course</option>
                                 <option>Full Stack Development</option>
                                 <option>Data Science & AI</option>
                                 <option>MERN / MEAN Stack</option>
@@ -177,7 +184,7 @@
                                 <option>LINUX Administrators</option>
                             </select>
                         </div>
-                        <div class="form-group"><label>Your Message</label><textarea placeholder="Ask us anything about the course, batch timings, or placements..."></textarea></div>
+                        <div class="form-group"><label>Your Message</label><textarea name="message" placeholder="Ask us anything about the course, batch timings, or placements..."></textarea></div>
                         <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Submit Enquiry</button>
                     </form>
                 </div>
@@ -228,18 +235,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/workshop.js"></script>
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-                navbar.style.top = '0';
-            } else {
-                navbar.classList.remove('scrolled');
-                navbar.style.top = '38px';
-            }
-        });
-    </script>
 </body>
 
 </html>

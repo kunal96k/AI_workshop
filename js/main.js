@@ -128,11 +128,13 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     if (navbar) {
-        if (currentScroll > 50) {
+        if (currentScroll > 40) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+        
+        // Hide/Show navbar on scroll
         if (currentScroll > lastScroll && currentScroll > 300) {
             navbar.style.transform = 'translateY(-100%)';
         } else {
@@ -148,7 +150,15 @@ if (hamburger) {
         navLinks.classList.toggle('active');
         if (navOverlay) navOverlay.classList.toggle('active');
         document.body.classList.toggle('menu-active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        
+        // Stricter scroll lock for mobile
+        if (navLinks.classList.contains('active')) {
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+        }
     });
 }
 
@@ -158,6 +168,7 @@ if (navOverlay) {
         navLinks.classList.remove('active');
         navOverlay.classList.remove('active');
         document.body.classList.remove('menu-active');
+        document.documentElement.style.overflow = '';
         document.body.style.overflow = '';
     });
 }

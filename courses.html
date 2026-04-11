@@ -62,14 +62,8 @@
             letter-spacing: 0.5px;
         }
 
-        @media (max-width: 991px) {
-            .top-bar-left {
-                display: none;
-            }
-
-            .top-bar-inner {
-                justify-content: center;
-            }
+        @media (max-width: 1024px) {
+            .top-bar { display: none; }
         }
     </style>
 </head>
@@ -108,12 +102,23 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar" id="navbar" style="top: 38px;">
+    <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <img src="images/capernaum_12.png" alt="Capernaum Solutions Pvt. Ltd" class="logo-img">
+                <div class="association-block">
+                    <div class="assoc-label">Association With</div>
+                    <div class="assoc-brand">TechnoKraft Training & Solution Pvt. Ltd.</div>
+                </div>
             </a>
             <div class="nav-links" id="navLinks">
+                <div class="sidebar-logo">
+                    <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
+                    <div class="association-block">
+                        <div class="assoc-label">Association With</div>
+                        <div class="assoc-brand">TechnoKraft Training & Solution Pvt. Ltd.</div>
+                    </div>
+                </div>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <div class="dropdown">
@@ -156,7 +161,7 @@
     </section>
 
     <!-- Full Stack Development Section -->
-    <section class="services-section" id="fullstack" style="padding: 100px 0;">
+    <section class="services-section" id="fullstack">
         <div class="container">
             <div class="section-header reveal-flip">
                 <div class="section-label">Master Path</div>
@@ -205,7 +210,7 @@
     </section>
 
     <!-- Data Science & AI Section -->
-    <section class="services-section" id="data-science" style="padding: 100px 0; background: var(--bg-secondary);">
+    <section class="services-section" id="data-science" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-label">Future Skills</div>
@@ -235,7 +240,7 @@
     </section>
 
     <!-- MERN / MEAN Stack Section -->
-    <section class="services-section" id="mern" style="padding: 100px 0;">
+    <section class="services-section" id="mern">
         <div class="container">
             <div class="section-header reveal-flip">
                 <div class="section-label">Web Innovation</div>
@@ -257,9 +262,9 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- App Development, CCNA, and Linux Admin in separate grid -->
-    <section class="services-section" style="padding: 100px 0; background: var(--bg-primary);">
+    <section class="services-section" style="background: var(--bg-primary);">
         <div class="container">
             <div class="ws-takeaway-grid"
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
@@ -284,9 +289,10 @@
                         environments.</p>
                 </div>
             </div>
-        </div>
-        <!-- Project & Outcome Section -->
-        <section class="ws-takeaways" style="padding: 100px 0; background: var(--bg-tertiary);">
+        </section>
+ 
+    <!-- Project & Outcome Section -->
+    <section class="ws-takeaways" style="background: var(--bg-tertiary);">
             <div class="container">
                 <div class="section-header reveal">
                     <div class="section-label">Real Experience</div>
@@ -315,7 +321,7 @@
         </section>
 
         <!-- Specific Course FAQ -->
-        <section id="course-faq" class="ws-faq" style="padding: 100px 0; background: var(--bg-secondary);">
+        <section id="course-faq" class="ws-faq" style="background: var(--bg-secondary);">
             <div class="container">
                 <div class="section-header reveal">
                     <div class="section-label">Course Queries</div>
@@ -421,18 +427,6 @@
 
         <script src="js/main.js"></script>
         <script src="js/workshop.js"></script>
-        <script>
-            window.addEventListener('scroll', function () {
-                const navbar = document.getElementById('navbar');
-                if (window.scrollY > 40) {
-                    navbar.classList.add('scrolled');
-                    navbar.style.top = '0';
-                } else {
-                    navbar.classList.remove('scrolled');
-                    navbar.style.top = '38px';
-                }
-            });
-        </script>
 </body>
 
 </html>

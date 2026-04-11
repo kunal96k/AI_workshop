@@ -440,53 +440,9 @@
     // ---- FAQ Accordion (Moved here) ----
 })();
 
-// ===== FAQ ACCORDION ENGINE (Event Delegation Model) =====
-(function () {
-    // Delegated click handler on document to ensure reliability
-    document.addEventListener('click', function(e) {
-        const questionBtn = e.target.closest('.ws-faq-question');
-        if (!questionBtn) return;
+// ===== FAQ ACCORDION ENGINE (Self-Contained & Robust) =====
+// FAQ Accordion logic removed - now handled by Bootstrap 5 native components
 
-        const item = questionBtn.closest('.ws-faq-item');
-        const answer = item.querySelector('.ws-faq-answer');
-        if (!answer) return;
-
-        const isActive = item.classList.contains('active');
-        
-        // Close other items in the same list
-        const parentList = item.closest('.ws-faq-list');
-        if (parentList) {
-            parentList.querySelectorAll('.ws-faq-item').forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                    const otherAnswer = otherItem.querySelector('.ws-faq-answer');
-                    if (otherAnswer) {
-                        otherAnswer.style.maxHeight = null;
-                        otherAnswer.style.paddingTop = '0';
-                    }
-                }
-            });
-        }
-        
-        // Toggle current item
-        if (!isActive) {
-            item.classList.add('active');
-            answer.style.maxHeight = (answer.scrollHeight + 50) + "px";
-            answer.style.paddingTop = '10px';
-        } else {
-            item.classList.remove('active');
-            answer.style.maxHeight = null;
-            answer.style.paddingTop = '0';
-        }
-    });
-
-    // Optional: Re-calculate heights on window resize
-    window.addEventListener('resize', function() {
-        document.querySelectorAll('.ws-faq-item.active .ws-faq-answer').forEach(answer => {
-            answer.style.maxHeight = (answer.scrollHeight + 50) + "px";
-        });
-    });
-})();
 
 /*
 (function () {

@@ -25,9 +25,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- Bootstrap 5 for robust components -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/premium.css">
     <link rel="stylesheet" href="css/workshop.css">
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -40,6 +43,12 @@
             font-size: 13px;
             z-index: 1100;
             position: relative;
+        }
+
+        @media (max-width: 1024px) {
+            .top-bar {
+                display: none;
+            }
         }
 
         .top-bar-inner {
@@ -133,7 +142,7 @@
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
                 <div class="ws-popup-badge"><ion-icon name="information-circle-outline"></ion-icon> QUICK ENQUIRY</div>
-                <h3>IT Course <span>Admissions Open</span></h3>
+                <h3>IT Course Admissions Open</h3>
                 <p>Fill in your details for a FREE Careers roadmap</p>
             </div>
             <div class="ws-popup-body" id="wsPopupFormBody">
@@ -180,7 +189,7 @@
             </div>
             <div class="ws-popup-success" id="wsPopupSuccess">
                 <ion-icon name="checkmark-circle-outline"></ion-icon>
-                <h3>Request Received! 🎉</h3>
+                <h3>Request Received!</h3>
                 <p>One of our career counselors will call you shortly to discuss your path.</p>
             </div>
         </div>
@@ -195,24 +204,23 @@
     <div class="grid-pattern"></div>
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Navbar (Old Style Restored) -->
-    <nav class="navbar" id="navbar" style="top: 38px;">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo"
-                style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+            <a href="index.html" class="nav-logo">
                 <img src="images/capernaum_12.png" alt="Capernaum Solutions Pvt. Ltd" class="logo-img">
-                <div class="association-block"
-                    style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 15px; line-height: 1.2;">
-                    <div
-                        style="font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">
-                        Association With</div>
-                    <div class="assoc-brand" style="font-size: 11px; font-weight: 600; color: #fff; opacity: 0.9;">
-                        TechnoKraft Training & Solution Pvt. Ltd.</div>
+                <div class="association-block">
+                    <div class="assoc-label">Association With</div>
+                    <div class="assoc-brand">TechnoKraft Training & Solution Pvt. Ltd.</div>
                 </div>
             </a>
             <div class="nav-links" id="navLinks">
                 <div class="sidebar-logo">
                     <img src="images/capernaum_12.png" alt="Capernaum Solutions" class="logo-img">
+                    <div class="association-block">
+                        <div class="assoc-label">Association With</div>
+                        <div class="assoc-brand">TechnoKraft Training & Solution Pvt. Ltd.</div>
+                    </div>
                 </div>
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About Us</a>
@@ -238,7 +246,7 @@
                 </div>
                 <a href="careers.html">Careers</a>
                 <a href="#faq">FAQ</a>
-                <a href="javascript:void(0)" id="openContactModal" style="cursor: pointer;">Contact</a>
+                <a href="contact.html">Contact</a>
                 <a href="javascript:void(0)" id="navApplyNow" class="nav-cta">Apply Now</a>
             </div>
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
@@ -577,10 +585,12 @@
                                     YA</div>
                                 <div>
                                     <h4 style="margin: 0; color: var(--text-primary);">Yash Ahire</h4>
-                                    <p style="margin: 0; font-size: 12px; color: var(--gold);">Network Engineer at TCS</p>
+                                    <p style="margin: 0; font-size: 12px; color: var(--gold);">Network Engineer at TCS
+                                    </p>
                                 </div>
                             </div>
-                            <p style="font-style: italic;">"The Networking (CCNA) training was highly detailed. Hands-on configuration of Cisco routers helped me clear the TCS technical round easily."</p>
+                            <p style="font-style: italic;">"The Networking (CCNA) training was highly detailed. Hands-on
+                                configuration of Cisco routers helped me clear the TCS technical round easily."</p>
                         </div>
                         <!-- Story 2 -->
                         <div class="ws-takeaway-card"
@@ -591,10 +601,13 @@
                                     KP</div>
                                 <div>
                                     <h4 style="margin: 0; color: var(--text-primary);">Kunal Patil</h4>
-                                    <p style="margin: 0; font-size: 12px; color: var(--gold);">Full Stack Java Dev at Infosys</p>
+                                    <p style="margin: 0; font-size: 12px; color: var(--gold);">Full Stack Java Dev at
+                                        Infosys</p>
                                 </div>
                             </div>
-                            <p style="font-style: italic;">"From Spring Boot to React, the Java Full Stack track provided exactly what the industry demands. The project work was the turning point for me."</p>
+                            <p style="font-style: italic;">"From Spring Boot to React, the Java Full Stack track
+                                provided exactly what the industry demands. The project work was the turning point for
+                                me."</p>
                         </div>
                         <!-- Story 3 -->
                         <div class="ws-takeaway-card"
@@ -674,64 +687,79 @@
             </div>
 
             <div class="ws-faq-container" style="max-width: 850px; margin: 0 auto;">
-                <div class="ws-faq-list">
+                <div class="accordion accordion-flush" id="faqAccordion">
                     <!-- Q1 -->
-                    <div class="ws-faq-item">
-                        <button class="ws-faq-question">
-                            <span>Who can join these IT training programs?</span>
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div class="ws-faq-answer">
-                            <p>Our courses are designed for freshers, final-year students, and working professionals
-                                looking to switch careers. We start from the basics, so no prior high-level coding
-                                experience is required.</p>
+                    <div class="accordion-item ws-faq-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed ws-faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <span>Who can join these IT training programs?</span>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body ws-faq-answer">
+                                <p>Our courses are designed for freshers, final-year students, and working professionals
+                                    looking to switch careers. We start from the basics, so no prior high-level coding
+                                    experience is required.</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Q2 -->
-                    <div class="ws-faq-item">
-                        <button class="ws-faq-question">
-                            <span>Do you provide 100% placement guarantee?</span>
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div class="ws-faq-answer">
-                            <p>We provide 100% placement support, which includes unlimited interview calls, mock
-                                interviews, and resume optimization. Our goal is to ensure every dedicated student gets
-                                placed in a top MNC.</p>
+                    <div class="accordion-item ws-faq-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed ws-faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span>Do you provide 100% placement guarantee?</span>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body ws-faq-answer">
+                                <p>We provide 100% placement support, which includes unlimited interview calls, mock
+                                    interviews, and resume optimization. Our goal is to ensure every dedicated student gets
+                                    placed in a top MNC.</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Q3 -->
-                    <div class="ws-faq-item">
-                        <button class="ws-faq-question">
-                            <span>Are there any weekend batches for working professionals?</span>
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div class="ws-faq-answer">
-                            <p>Yes, we offer special weekend batches and late evening batches specifically designed for
-                                working professionals who want to upgrade their skills without quitting their jobs.</p>
+                    <div class="accordion-item ws-faq-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed ws-faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <span>Are there any weekend batches for working professionals?</span>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body ws-faq-answer">
+                                <p>Yes, we offer special weekend batches and late evening batches specifically designed for
+                                    working professionals who want to upgrade their skills without quitting their jobs.</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Q4 -->
-                    <div class="ws-faq-item">
-                        <button class="ws-faq-question">
-                            <span>Can I attend a free demo session before enrolling?</span>
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div class="ws-faq-answer">
-                            <p>Absolutely! We encourage students to attend a free counseling and demo session to
-                                understand the teaching style and industrial scope of the course before making a
-                                decision.</p>
+                    <div class="accordion-item ws-faq-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed ws-faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <span>Can I attend a free demo session before enrolling?</span>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body ws-faq-answer">
+                                <p>Absolutely! We encourage students to attend a free counseling and demo session to
+                                    understand the teaching style and industrial scope of the course before making a
+                                    decision.</p>
+                            </div>
                         </div>
                     </div>
                     <!-- Q5 -->
-                    <div class="ws-faq-item">
-                        <button class="ws-faq-question">
-                            <span>Is the internship certificate recognized industry-wide?</span>
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                        </button>
-                        <div class="ws-faq-answer">
-                            <p>Yes, the certificate provided by Capernaum Solutions in association with TechnoKraft is
-                                recognized globally, as our training follows industry-standard protocols and live
-                                projects.</p>
+                    <div class="accordion-item ws-faq-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed ws-faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <span>Is the internship certificate recognized industry-wide?</span>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body ws-faq-answer">
+                                <p>Yes, the certificate provided by Capernaum Solutions in association with TechnoKraft is
+                                    recognized globally, as our training follows industry-standard protocols and live
+                                    projects.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -846,35 +874,48 @@
                 <div style="padding: 50px;">
                     <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 30px;">Enquire Now</h3>
                     <form id="indexContactForm">
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
-                            <div class="ws-form-group">
-                                <label
-                                    style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">First
-                                    Name</label>
-                                <input type="text" placeholder="Your Name" required
-                                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary);">
-                            </div>
-                            <div class="ws-form-group">
-                                <label
-                                    style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">Last
-                                    Name</label>
-                                <input type="text" placeholder="Last Name" required
-                                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary);">
-                            </div>
+                        <div class="ws-form-group" style="margin-bottom: 20px;">
+                            <label
+                                style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">Full
+                                Name</label>
+                            <input type="text" name="name" placeholder="Your full name" required
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary);">
                         </div>
                         <div class="ws-form-group" style="margin-bottom: 20px;">
                             <label
                                 style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">Email
                                 Address</label>
-                            <input type="email" placeholder="example@mail.com" required
+                            <input type="email" name="email" placeholder="example@mail.com" required
                                 style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary);">
                         </div>
-                        <div class="ws-form-group" style="margin-bottom: 25px;">
+                        <div class="ws-form-group" style="margin-bottom: 20px;">
                             <label
                                 style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">Phone
                                 Number</label>
-                            <input type="tel" placeholder="10-digit number" required
+                            <input type="tel" name="phone" placeholder="10-digit number" required
                                 style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary);">
+                        </div>
+                        <div class="ws-form-group" style="margin-bottom: 20px;">
+                            <label
+                                style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">Course
+                                Interested In</label>
+                            <select name="course" required
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary); font-family: inherit;">
+                                <option value="" disabled selected>Select Course</option>
+                                <option>Full Stack Development</option>
+                                <option>Data Science & AI</option>
+                                <option>MERN / MEAN Stack</option>
+                                <option>App Development</option>
+                                <option>Networking (CCNA)</option>
+                                <option>LINUX Administrators</option>
+                            </select>
+                        </div>
+                        <div class="ws-form-group" style="margin-bottom: 25px;">
+                            <label
+                                style="font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; display: block;">Your
+                                Message</label>
+                            <textarea name="message" placeholder="Tell us your goals..."
+                                style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-medium); background: var(--bg-secondary); min-height: 80px; font-family: inherit; font-size: 14px;"></textarea>
                         </div>
                         <button type="submit" class="btn-primary"
                             style="width: 100%; justify-content: center; padding: 15px; font-weight: 700;">
@@ -959,7 +1000,7 @@
     <!-- ========== CONTACT MODAL WITH MAP (NEW) ========== -->
     <div class="ws-popup-overlay" id="contactModalOverlay">
         <div class="ws-popup-modal" style="max-width: 900px;">
-            <div class="ws-popup-header" style="background: var(--gradient-gold); color: #fff; padding: 25px 30px;">
+            <div class="ws-popup-header" style="background: linear-gradient(135deg, #1a1a2e 0%, #252545 100%); color: #fff; padding: 25px 30px;">
                 <button class="ws-popup-close" id="contactModalClose"
                     style="color: #fff; opacity: 0.8; border: none; background: transparent; cursor: pointer; font-size: 24px;">
                     <ion-icon name="close-outline"></ion-icon>
@@ -968,8 +1009,7 @@
                     style="background: rgba(0,0,0,0.2); color: #fff; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 20px; font-size: 10px; font-weight: 800; text-transform: uppercase;">
                     <ion-icon name="map-outline"></ion-icon> OFFICE LOCATION
                 </div>
-                <h3 style="color: #fff; margin-top: 10px; font-size: 22px;">Connect with <span>Capernaum
-                        Solutions</span></h3>
+                <h3 style="color: #fff; margin-top: 10px; font-size: 24px; font-weight: 800;">Connect with Capernaum Solutions</h3>
                 <p style="color: rgba(255,255,255,0.9); font-size: 14px;">Visit our Viman Nagar campus or drop an
                     enquiry</p>
             </div>
@@ -981,25 +1021,44 @@
                             style="margin-bottom: 12px; display: flex; flex-direction: column; gap: 5px;">
                             <label style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Full
                                 Name</label>
-                            <input type="text" placeholder="Enter name" required
+                            <input type="text" name="name" placeholder="Enter name" required
                                 style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); outline: none;">
                         </div>
                         <div class="ws-form-group"
                             style="margin-bottom: 12px; display: flex; flex-direction: column; gap: 5px;">
                             <label style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Email
                                 Address</label>
-                            <input type="email" placeholder="email@example.com" required
+                            <input type="email" name="email" placeholder="email@example.com" required
+                                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); outline: none;">
+                        </div>
+                        <div class="ws-form-group"
+                            style="margin-bottom: 12px; display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Phone
+                                Number</label>
+                            <input type="tel" name="phone" placeholder="10-digit number" required
                                 style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); outline: none;">
                         </div>
                         <div class="ws-form-group"
                             style="margin-bottom: 15px; display: flex; flex-direction: column; gap: 5px;">
-                            <label style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Phone
-                                Number</label>
-                            <input type="tel" placeholder="10-digit number" required
-                                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); outline: none;">
+                            <label style="font-size: 12px; font-weight: 700; color: var(--text-primary);">Course
+                                Interested In</label>
+                            <select name="course" required
+                                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); outline: none; font-family: inherit;">
+                                <option value="" disabled selected>Select Course</option>
+                                <option>Full Stack Development</option>
+                                <option>Data Science & AI</option>
+                                <option>MERN / MEAN Stack</option>
+                                <option>App Development</option>
+                                <option>Networking (CCNA)</option>
+                                <option>LINUX Administrators</option>
+                            </select>
                         </div>
-                        <textarea placeholder="Tell us your requirements..."
-                            style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); min-height: 80px; margin-bottom: 15px; outline: none; font-family: inherit; font-size: 13px;"></textarea>
+                        <div class="ws-form-group"
+                            style="margin-bottom: 20px; display: flex; flex-direction: column; gap: 5px;">
+                            <label style="font-size: 13px; font-weight: 700; color: var(--text-primary);">Your Message</label>
+                            <textarea name="message" placeholder="Tell us your goals..."
+                                style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border-medium); background: var(--bg-secondary); min-height: 80px; outline: none; font-family: inherit; font-size: 13px;"></textarea>
+                        </div>
                         <button type="submit" class="ws-popup-submit"
                             style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: var(--gradient-gold); color: #fff; border: none; border-radius: 30px; font-weight: 700; cursor: pointer;">
                             <ion-icon name="paper-plane-outline"></ion-icon> Submit Enquiry
@@ -1019,52 +1078,60 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/workshop.js"></script>
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Navbar scroll logic
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 40) {
-                navbar.classList.add('scrolled');
-                navbar.style.top = '0';
-            } else {
-                navbar.classList.remove('scrolled');
-                navbar.style.top = '38px';
+        (function () {
+            // Navbar scroll logic
+            window.addEventListener('scroll', function () {
+                const navbar = document.getElementById('navbar');
+                if (!navbar) return;
+
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                    navbar.style.top = '0';
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.style.top = '38px';
+                }
+            });
+
+            // Contact Modal Logic
+            const contactModalOverlay = document.getElementById('contactModalOverlay');
+            const openContactModal = document.getElementById('openContactModal');
+            const navApplyNow = document.getElementById('navApplyNow');
+            const contactModalClose = document.getElementById('contactModalClose');
+
+            if (openContactModal) {
+                openContactModal.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (contactModalOverlay) contactModalOverlay.classList.add('active');
+                });
             }
-        });
+            if (navApplyNow) {
+                navApplyNow.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (contactModalOverlay) contactModalOverlay.classList.add('active');
+                });
+            }
+            if (contactModalClose) {
+                contactModalClose.addEventListener('click', () => {
+                    if (contactModalOverlay) contactModalOverlay.classList.remove('active');
+                });
+            }
 
-        // Contact Modal Logic
-        const contactModalOverlay = document.getElementById('contactModalOverlay');
-        const openContactModal = document.getElementById('openContactModal');
-        const navApplyNow = document.getElementById('navApplyNow');
-        const contactModalClose = document.getElementById('contactModalClose');
+            // Close on overlay click
+            if (contactModalOverlay) {
+                contactModalOverlay.addEventListener('click', (e) => {
+                    if (e.target === contactModalOverlay) contactModalOverlay.classList.remove('active');
+                });
+            }
 
-        if (openContactModal) {
-            openContactModal.addEventListener('click', (e) => {
-                e.preventDefault();
-                contactModalOverlay.classList.add('active');
+            // Close on escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && contactModalOverlay) contactModalOverlay.classList.remove('active');
             });
-        }
-        if (navApplyNow) {
-            navApplyNow.addEventListener('click', (e) => {
-                e.preventDefault();
-                contactModalOverlay.classList.add('active');
-            });
-        }
-        if (contactModalClose) {
-            contactModalClose.addEventListener('click', () => {
-                contactModalOverlay.classList.remove('active');
-            });
-        }
-
-        // Close on overlay click
-        contactModalOverlay.addEventListener('click', (e) => {
-            if (e.target === contactModalOverlay) contactModalOverlay.classList.remove('active');
-        });
-
-        // Close on escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') contactModalOverlay.classList.remove('active');
-        });
+        })();
 
         // ---- Success Stories Slider Engine ----
         (function () {
